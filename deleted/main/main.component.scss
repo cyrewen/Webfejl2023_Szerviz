@@ -1,0 +1,15 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-desc {
+    width: 70vw;
+    display: inline-block;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+}

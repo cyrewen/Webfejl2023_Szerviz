@@ -1,0 +1,35 @@
+mat-card {
+    width: 80%;
+    height: fit-content;
+    align-self: center;
+    margin-top: 40px;
+    max-width: 700px;
+}
+
+mat-card-header {
+    display: block;
+}
+
+mat-card-content {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+}
+
+mat-card-content span {
+    width: 100%;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+p mat-icon {
+    vertical-align: middle;
+    padding: 10px;
+}
+

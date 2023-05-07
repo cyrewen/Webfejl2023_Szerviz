@@ -1,0 +1,28 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu [sidenav]="sidenav" [currentUser]="currentUser" (onLogout)="logout($event)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button fxHide.gt-xs="" id="sidenav-toggle" mat-icon-button
+        (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+      <span>{{environment.shopName}}</span>
+      <ul fxLayout fxLayoutGap="10px" fxHide.xs id="toolbar-nav-items">
+        <li><a mat-raised-button color="primary" [routerLink]="'/welcome'">Welcome</a></li>
+        <li *ngIf="currentUser"><a mat-raised-button color="primary" [routerLink]="'/booking'" >Booking</a></li>
+        <li *ngIf="!currentUser"><a mat-raised-button color="primary" [routerLink]="'/login'" >Login</a></li>
+        <li *ngIf="!currentUser"><a mat-raised-button color="primary" [routerLink]="'/register'" >Sign Up</a></li>
+        <li><a mat-raised-button color="primary" [routerLink]="'/contact'">Contact</a></li>
+        <li *ngIf="currentUser" ><a mat-raised-button color="primary" (click)="logout()" [matTooltip]="'Logging out does not seem to work from here, but it does from the sidenav'"  >Logout</a></li>
+      </ul>
+      <div fxFlex fxLayout="row"></div>
+      <span *ngIf="currentUser">{{currentUser.name.firstname + ' ' + currentUser.name.lastname}}
+        <button mat-fab color="primary" [routerLink]="'/user-home'" [matTooltip]="profileTooltip">
+          <mat-icon class="material-symbols-outlined">person</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <div class="bottom-div"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

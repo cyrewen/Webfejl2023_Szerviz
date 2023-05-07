@@ -1,0 +1,28 @@
+<div class="div-flex">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Mail-in/Store address</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <span>
+                <p><mat-icon>home</mat-icon>{{address}}</p>
+                <button mat-mini-fab [cdkCopyToClipboard]="address" [matTooltip]="copyTooltip"><mat-icon>content_copy</mat-icon></button>
+            </span>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Customer Service</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <span>
+                <p><mat-icon>mail</mat-icon>{{email}}</p>
+                <button mat-mini-fab [cdkCopyToClipboard]="email" [matTooltip]="copyTooltip"><mat-icon>content_copy</mat-icon></button>
+            </span>
+            <span>
+                <p><mat-icon>phone</mat-icon>{{phone}}</p>
+                <button mat-mini-fab [cdkCopyToClipboard]="phone" [matTooltip]="copyTooltip"><mat-icon>content_copy</mat-icon></button>
+            </span>
+        </mat-card-content>
+    </mat-card>
+</div>

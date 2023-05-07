@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <a mat-list-item href="" routerLink="/welcome" (click)="sidenav?.toggle()"><mat-icon>home</mat-icon>Welcome</a>
+    <a mat-list-item href="" routerLink="/booking" (click)="sidenav?.toggle()" *ngIf="currentUser"><mat-icon>schedule</mat-icon>Booking</a>
+    <a mat-list-item href="" routerLink="/login" (click)="sidenav?.toggle()" *ngIf="!currentUser"><mat-icon>login</mat-icon>Login</a>
+    <a mat-list-item href="" routerLink="/register" (click)="sidenav?.toggle()" *ngIf="!currentUser"><mat-icon>person_add</mat-icon>Sign Up</a>
+    <a mat-list-item href="" routerLink="/contact" (click)="sidenav?.toggle()"><mat-icon>contact_support</mat-icon>Contact</a>
+    <a mat-list-item href="" (click)="sidenav?.toggle(); onLogout.emit(true)" *ngIf="currentUser"><mat-icon>logout</mat-icon>Logout</a>
+</mat-nav-list>

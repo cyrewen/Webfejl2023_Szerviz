@@ -1,0 +1,45 @@
+#toolbar-nav-items {
+    list-style: none;
+    display: flex;
+}
+
+#toolbar-nav-items li {
+    margin: 0; 
+}
+
+#toolbar-nav-items a {
+    font-size: 20px;
+}
+
+#sidenav-toggle {
+    margin-right: 30px;
+}
+
+mat-icon {
+    transform: scale(1.4);
+}
+
+mat-sidenav-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.bottom-div {
+    height: 50px;
+}
+
+mat-toolbar {
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    vertical-align: middle;
+    padding: 10px;
+  }

@@ -1,0 +1,43 @@
+<div class="div-flex">
+    <h1>User Profile</h1>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title><mat-icon>schedule</mat-icon>My appointments</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="link">
+                <mat-list-item
+                    *ngFor="let appointment of myAppointments">{{appointment.dateTime.toString()}}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card><mat-card>
+        <mat-card-header>
+            <mat-card-title><mat-icon>password</mat-icon>Password change</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field><mat-label for="oldPassword">Old password: </mat-label><input matInput type="password"
+                    [formControl]="oldPassword"></mat-form-field>
+            <mat-form-field><mat-label for="newPassword">New password: </mat-label><input matInput type="password"
+                    [formControl]="newPassword"></mat-form-field>
+            <mat-form-field><mat-label for="newPasswordRe">Confirm new password: </mat-label><input matInput
+                    type="password" [formControl]="newPasswordRe"></mat-form-field>
+            <span>
+                <button mat-raised-button color="primary" (click)="changePassword()">Change</button>
+                <button mat-raised-button color="primary" (click)="clearPasswordChange()">Clear</button>
+            </span>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title><mat-icon>home</mat-icon>Address</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field><mat-label for="address">Address: </mat-label><input matInput type="text"
+                    [formControl]="address"></mat-form-field>
+        </mat-card-content>
+        <span>
+            <button mat-raised-button color="primary" (click)="changeAddress()">Change</button>
+            <button mat-raised-button color="primary" (click)="resetAddress()">Reset</button>
+        </span>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+<!-- <form (ngSubmit)="login()"> -->
+<div class="main-div">
+    <h1>Please sign in</h1>
+    <h2>Test account: test2@gmail.com   Testpw2*</h2>
+    <mat-form-field><mat-label for="email">Email: </mat-label><input matInput type="text"
+            [formControl]="email"></mat-form-field>
+    <mat-form-field><mat-label for="password">Password: </mat-label><input matInput type="password"
+            [formControl]="password"></mat-form-field>
+    <span>
+        <button mat-raised-button color="primary" (click)="login()">Login</button>
+        <button mat-raised-button color="primary" [routerLink]="'/register'">Sign Up</button>
+    </span>
+
+</div>
+<!-- </form> -->

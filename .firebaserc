@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "webfejl2023-szerviz-erik"
+  },
+  "targets": {
+    "webfejl2023-szerviz-erik": {
+      "hosting": {
+        "webfejl2023-szerviz-erik": [
+          "webfejl2023-szerviz-erik"
+        ]
+      }
+    }
+  }
+}
